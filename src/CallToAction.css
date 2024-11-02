@@ -1,0 +1,100 @@
+/* CallToAction.css */
+.hero-section {
+    background-color: var(--primary-green);
+    padding: 4rem 0;
+    position: relative;
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;  /* Space for the next section */
+  }
+  
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .text-content {
+    max-width: 45%;
+    color: var(--highlight-white);
+    padding-right: 2rem;
+  }
+  
+  .image-container {
+    position: absolute;
+    width: 500px;  /* Fixed width */
+    height: 400px; /* Fixed height */
+    right: 20px;
+    top: 0px;  /* Move up to overlap */
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+  
+  .text-content h1 {
+    font-family: 'Markazi Text', serif;
+    font-size: 4rem;
+    color: var(--primary-yellow);
+    margin: 0;
+  }
+  
+  .text-content h2 {
+    font-family: 'Markazi Text', serif;
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .text-content p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .cta-button {
+    background-color: var(--primary-yellow);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .text-content {
+      max-width: 100%;
+      margin-bottom: 3rem;
+    }
+  
+    .image-container {
+        position: relative;
+        width: 45%;
+        /* Make container square using aspect ratio */
+        aspect-ratio: 1;
+      }
+  
+      .hero-image {
+        position: absolute;
+        width: 100%;
+        height: 100%; /* Make image fill the square container */
+        border-radius: 16px;
+        top: -3rem; /* Move it more up by increasing this negative value */
+        right: 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        object-fit: cover; /* This ensures the image covers the square area without distortion */
+      }
+  }

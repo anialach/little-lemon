@@ -1,0 +1,408 @@
+:root {
+    --primary-green: #495E57;
+    --primary-yellow: #F4CE14;
+    --secondary-salmon: #EE9972;
+    --secondary-peach: #FBDABB;
+    --highlight-white: #EDEFEE;
+    --highlight-black: #333333;
+  }
+  
+  .homepage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* CallToAction Component Styles */
+  .call-to-action {
+    background-color: var(--primary-green);
+    color: var(--highlight-white);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+  
+  .cta-content {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .call-to-action h1 {
+    font-family: 'Markazi Text', serif;
+    font-size: 4rem;
+    color: var(--primary-yellow);
+    margin: 0;
+  }
+  
+  .call-to-action h2 {
+    font-family: 'Markazi Text', serif;
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+  }
+  
+  .call-to-action p {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.2rem;
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-button {
+    background-color: var(--primary-yellow);
+    color: var(--highlight-black);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--secondary-salmon);
+  }
+  
+  .cta-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cta-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+  
+  /* Specials Component Styles */
+.specials {
+  display: inline-block;
+  margin: 4rem 0;
+  width: 100%;
+}
+
+.specials-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.specials-top-row h2 {
+  font-family: 'Markazi Text', serif;
+  font-size: 64px;
+  font-weight: 500;
+  color: var(--highlight-black);
+  margin: 0;
+}
+
+.menu-button {
+  background-color: var(--primary-yellow);
+  color: var(--highlight-black);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+  background-color: var(--secondary-salmon);
+}
+
+.specials-bottom-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.special-item {
+  background-color: var(--highlight-white);
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.special-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.special-item-content {
+  padding: 1.5rem;
+  background-color: #EDEFEE;
+}
+
+.special-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.special-item h3 {
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--highlight-black);
+  margin: 0;
+}
+
+.special-item .price {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  color: var(--secondary-salmon);
+  margin: 0;
+  font-size: 16px;
+}
+
+.special-item p {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--highlight-black);
+  margin-bottom: 2rem;
+}
+
+.order-button {
+  font-family: 'Karla', sans-serif;
+  background-color: var(--primary-yellow);
+  color: var(--highlight-black);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: var(--secondary-salmon);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .specials-top-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .specials-bottom-row {
+    grid-template-columns: 1fr;
+  }
+}
+  
+  /* CustomersSay Component Styles */
+  .testimonials-section {
+    background-color: var(--secondary-peach);
+    padding: 4rem 0;
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 4rem;
+  }
+  
+  .testimonials-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .testimonials-content h2 {
+    font-family: 'Markazi Text', serif;
+    font-size: 2.5rem;
+    color: var(--highlight-black);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .testimonial-card {
+    background-color: var(--highlight-white);
+    padding: 1.5rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rating {
+    color: var(--primary-yellow);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .customer-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    display: block;
+  }
+  
+  .name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--highlight-black);
+  }
+  
+  .review {
+    font-style: italic;
+    color: var(--highlight-black);
+    line-height: 1.4;
+    font-size: 0.95rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Chicago Component Styles */
+  .about-chicago {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    gap: 2rem;
+  }
+  
+  .about-chicago-content {
+    flex: 1;
+  }
+  
+  .about-chicago h2 {
+    font-family: 'Markazi Text', serif;
+    font-size: 4rem;
+    color: var(--primary-green);
+    margin: 0;
+  }
+  
+  .about-chicago h3 {
+    font-family: 'Markazi Text', serif;
+    font-size: 2.5rem;
+    color: var(--highlight-black);
+    margin: 0 0 1rem 0;
+  }
+  
+  .about-chicago p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--highlight-black);
+  }
+  
+  .about-chicago-images {
+    flex: 1;
+    position: relative;
+    height: 400px;
+  }
+  
+  .chicago-image-a,
+  .chicago-image-b {
+    position: absolute;
+    width: 60%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chicago-image-a {
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  
+  .chicago-image-b {
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .call-to-action, .about-chicago {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .cta-content, .about-chicago-content {
+      max-width: 100%;
+      padding-right: 0;
+      margin-bottom: 1rem;
+    }
+  
+    .cta-image-container, .about-chicago-images {
+      width: 100%;
+    }
+  
+    .cta-image {
+      max-width: 80%;
+      margin-top: 1rem;
+    }
+  
+    .specials-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu-button {
+      margin-top: 1rem;
+    }
+  
+    .specials-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .testimonial-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .about-chicago-images {
+      height: 500px;
+      margin-top: 2rem;
+    }
+  
+    .chicago-image-a,
+    .chicago-image-b {
+      width: 80%;
+      height: 250px;
+    }
+  
+    .chicago-image-a {
+      left: 10%;
+      top: 0;
+    }
+  
+    .chicago-image-b {
+      right: 10%;
+      bottom: 0;
+    }
+  }

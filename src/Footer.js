@@ -1,20 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import logo from './logo.svg';
 
 function Footer() {
   return (
-    <footer>
+    <footer className="footer-wrapper">
       <div className="footer-content">
         <div className="footer-section">
-          <img src="logo.png" alt="Little Lemon Logo" className="footer-logo" />
+          <img src={logo} alt="Little Lemon Logo" className="footer-logo" />
         </div>
         <div className="footer-section">
           <h3>Navigation</h3>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/menu">Menu</a></li>
-            <li><a href="/reservations">Reservations</a></li>
-            <li><a href="/order-online">Order Online</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/menu">Menu</Link></li>
+            <li><Link to="/reservations">Reservations</Link></li>
+            <li><Link to="/order-online">Order Online</Link></li>
           </ul>
         </div>
         <div className="footer-section">
@@ -26,14 +28,11 @@ function Footer() {
         <div className="footer-section">
           <h3>Social Media</h3>
           <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter</a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
           </ul>
         </div>
-      </div>
-      <div className="footer-bottom">
-        <p>&copy; 2024 Little Lemon. All rights reserved.</p>
       </div>
     </footer>
   );

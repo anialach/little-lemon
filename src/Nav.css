@@ -1,15 +1,26 @@
+/* Nav.css */
 nav {
   background-color: var(--highlight-white);
   padding: 10px 0;
+  width: 100%;
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.nav-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo-link {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.nav-logo-link:hover {
+  opacity: 0.8;
 }
 
 .nav-logo {
@@ -32,10 +43,42 @@ nav ul li a {
   color: var(--highlight-black);
   text-decoration: none;
   font-weight: bold;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--primary-green);
+}
+
+/* Create underline effect on hover */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-green);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Active link styles */
+nav ul li a.active {
+  color: var(--primary-green);
+}
+
+nav ul li a.active::after {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
-  .nav-container {
+  .nav-content {
     flex-direction: column;
   }
 

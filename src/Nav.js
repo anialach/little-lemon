@@ -1,19 +1,67 @@
+// Nav.js
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from './logo.svg';
 import './Nav.css';
 
 function Nav() {
+  const location = useLocation(); // This helps us determine which nav item is active
+
   return (
     <nav>
-      <div className="nav-container">
-        <img src={logo} alt="Little Lemon Logo" className="nav-logo" />
+      <div className="nav-content">
+        <Link to="/" className="nav-logo-link">
+          <img src={logo} alt="Little Lemon Logo" className="nav-logo" />
+        </Link>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/menu">Menu</a></li>
-          <li><a href="/reservations">Reservations</a></li>
-          <li><a href="/order-online">Order Online</a></li>
-          <li><a href="/login">Login</a></li>
+          <li>
+            <Link 
+              to="/" 
+              className={location.pathname === "/" ? "active" : ""}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/about"
+              className={location.pathname === "/about" ? "active" : ""}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/menu"
+              className={location.pathname === "/menu" ? "active" : ""}
+            >
+              Menu
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/reservations"
+              className={location.pathname === "/reservations" ? "active" : ""}
+            >
+              Reservations
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/order-online"
+              className={location.pathname === "/order-online" ? "active" : ""}
+            >
+              Order Online
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/login"
+              className={location.pathname === "/login" ? "active" : ""}
+            >
+              Login
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

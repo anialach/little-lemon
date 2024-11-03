@@ -1,0 +1,74 @@
+/* BookingForm.css */
+.booking-form {
+    display: grid;
+    max-width: 400px;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    color: var(--highlight-black);
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .submit-button {
+    background-color: var(--primary-yellow);
+    color: var(--highlight-black);
+    padding: 1rem;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: var(--secondary-salmon);
+  }
+  
+  /* Form validation styles */
+  input:invalid,
+  select:invalid {
+    border-color: red;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 480px) {
+    .booking-form {
+      max-width: 100%;
+      padding: 1rem;
+    }
+  }
+  .booking-page {
+  padding: 4rem 0;
+  min-height: calc(100vh - 300px); /* Account for header and footer */
+}
+
+.booking-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.booking-container h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 3rem;
+  color: var(--highlight-black);
+  margin-bottom: 2rem;
+}

@@ -5,7 +5,7 @@ import logo from './logo.svg';
 import './Nav.css';
 
 function Nav() {
-  const location = useLocation(); // This helps us determine which nav item is active
+  const location = useLocation();
 
   return (
     <nav>
@@ -40,8 +40,8 @@ function Nav() {
           </li>
           <li>
             <Link 
-              to="/reservations"
-              className={location.pathname === "/reservations" ? "active" : ""}
+              to="/booking"
+              className={location.pathname === "/booking" ? "active" : ""}
             >
               Reservations
             </Link>

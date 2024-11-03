@@ -8,24 +8,29 @@ import About from './About';
 import Menu from './Menu';
 import OrderOnline from './OrderOnline';
 import Login from './Login';
+import ConfirmedBooking from './components/ConfirmedBooking';
+import { BookingProvider } from './BookingProvider';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-      <Nav />
-      <div className="container">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/menu" element={<Menu />} />
-            <Route path="/booking" element={<BookingPage />} />
-            <Route path="/order-online" element={<OrderOnline />} />
-            <Route path="/login" element={<Login />} />
-          </Routes>
+      <BookingProvider>
+        <div className="App">
+          <Nav />
+          <div className="container">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/menu" element={<Menu />} />
+              <Route path="/booking" element={<BookingPage />} />
+              <Route path="/booking-confirmed" element={<ConfirmedBooking />} />
+              <Route path="/order-online" element={<OrderOnline />} />
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </BookingProvider>
     </Router>
   );
 }

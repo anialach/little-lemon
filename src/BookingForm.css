@@ -72,3 +72,27 @@
   color: var(--highlight-black);
   margin-bottom: 2rem;
 }
+
+.error-message {
+    color: #d32f2f;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  .form-group input:invalid,
+  .form-group select:invalid,
+  .form-group [aria-invalid="true"] {
+    border-color: #d32f2f;
+  }
+  
+  .submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Add asterisk for required fields */
+  label[for]::after {
+    content: "*";
+    color: #d32f2f;
+    margin-left: 4px;
+  }
